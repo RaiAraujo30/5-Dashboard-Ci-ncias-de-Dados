@@ -63,4 +63,3 @@ Colunas esperadas no CSV (separador `;`):
 - Pandas / NumPy
 - Plotly
 - Folium + streamlit-folium
-
