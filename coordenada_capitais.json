@@ -1,0 +1,34 @@
+{
+    "capitais": [
+      {
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "latitude": -19.9167,
+        "longitude": -43.9333
+      },
+      {
+        "cidade": "Recife",
+        "estado": "PE",
+        "latitude": -8.0543,
+        "longitude": -34.8813
+      },
+      {
+        "cidade": "Salvador",
+        "estado": "BA",
+        "latitude": -12.9711,
+        "longitude": -38.5108
+      },
+      {
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "latitude": -25.4290,
+        "longitude": -49.2671
+      },
+      {
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "latitude": -23.5505,
+        "longitude": -46.6333
+      }
+    ]
+  }

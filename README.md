@@ -8,14 +8,14 @@ O dashboard entrega:
 - **Mapa interativo com fluxos origem → destino**
 - **Custos logísticos por região** (por origem/destino/transportadora)
 
-> Observação: o dataset fornecido (`FCD_logistica.csv`) não possui latitude/longitude. Para permitir o **mapa interativo offline**, o app gera **coordenadas determinísticas** (a partir do nome da cidade) dentro de um bounding box do Brasil. As rotas/volumes são reais; apenas a posição no mapa é “sintética”, mas consistente.
+> Observação: o dataset fornecido (`FCD_logistica.csv`) não possui latitude/longitude. Para permitir o **mapa interativo offline**, o app usa **coordenadas reais** quando disponíveis em `coordenada_capitais.json` (apenas as capitais, pois as cidades sao ficticias) e usa **coordenadas determinísticas** (a partir do nome da cidade) como fallback. As rotas/volumes são reais; apenas parte das posições pode ser “sintética”, mas consistente.
 
 ## Como executar
 
 
 ### Pré-requisito (importante): versão do Python
 
-Para evitar instalação lenta/compilação de pacotes científicos no Windows, **recomenda-se Python 3.12**.
+Para evitar instalação lenta de pacotes científicos no Windows, **recomenda-se Python 3.12**.
 Se você estiver usando **Python 3.14**, é comum o `pip` tentar compilar `pandas/numpy` do zero.
 
 ### 1) Criar ambiente virtual (recomendado)
@@ -41,6 +41,8 @@ streamlit run app.py
 ```
 
 ## Dataset
+
+O app lê automaticamente o arquivo **`FCD_logistica.csv`** na raiz do projeto (mesma pasta do `app.py`).
 
 Colunas esperadas no CSV (separador `;`):
 - `pedido_id`
